@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactJS.Redux.Web.API", "ReactJS.Redux.Web.API\ReactJS.Redux.Web.API.csproj", "{12794557-FD15-424C-BD41-3DF46205ED3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactJS.Redux.CodeFirst", "..\ReactJS.Redux.CodeFirst\ReactJS.Redux.CodeFirst.csproj", "{3B115CBB-F534-4010-ADDB-58DB8D5DA5D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactJS.Redux.DatabaseFirst", "..\ReactJS.Redux.DatabaseFirst\ReactJS.Redux.DatabaseFirst.csproj", "{20E72A30-73AD-46F9-99B2-F7096A41638B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12794557-FD15-424C-BD41-3DF46205ED3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12794557-FD15-424C-BD41-3DF46205ED3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12794557-FD15-424C-BD41-3DF46205ED3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12794557-FD15-424C-BD41-3DF46205ED3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B115CBB-F534-4010-ADDB-58DB8D5DA5D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B115CBB-F534-4010-ADDB-58DB8D5DA5D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B115CBB-F534-4010-ADDB-58DB8D5DA5D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B115CBB-F534-4010-ADDB-58DB8D5DA5D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20E72A30-73AD-46F9-99B2-F7096A41638B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20E72A30-73AD-46F9-99B2-F7096A41638B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20E72A30-73AD-46F9-99B2-F7096A41638B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20E72A30-73AD-46F9-99B2-F7096A41638B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {832F9292-DFE7-4FA8-9536-CC2B36EE9AE3}
+	EndGlobalSection
+EndGlobal

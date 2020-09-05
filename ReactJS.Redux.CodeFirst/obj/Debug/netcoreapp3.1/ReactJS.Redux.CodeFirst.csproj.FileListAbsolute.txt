@@ -1,0 +1,13 @@
+C:\GitHub\ReactJS\ReactJS.Redux.CodeFirst\bin\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.dll.config
+C:\GitHub\ReactJS\ReactJS.Redux.CodeFirst\bin\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.deps.json
+C:\GitHub\ReactJS\ReactJS.Redux.CodeFirst\bin\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.runtimeconfig.json
+C:\GitHub\ReactJS\ReactJS.Redux.CodeFirst\bin\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.runtimeconfig.dev.json
+C:\GitHub\ReactJS\ReactJS.Redux.CodeFirst\bin\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.dll
+C:\GitHub\ReactJS\ReactJS.Redux.CodeFirst\bin\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.pdb
+C:\GitHub\ReactJS\ReactJS.Redux.CodeFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.AssemblyInfoInputs.cache
+C:\GitHub\ReactJS\ReactJS.Redux.CodeFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.AssemblyInfo.cs
+C:\GitHub\ReactJS\ReactJS.Redux.CodeFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.csproj.CoreCompileInputs.cache
+C:\GitHub\ReactJS\ReactJS.Redux.CodeFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.dll
+C:\GitHub\ReactJS\ReactJS.Redux.CodeFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.pdb
+C:\GitHub\ReactJS\ReactJS.Redux.CodeFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.genruntimeconfig.cache
+C:\GitHub\ReactJS\ReactJS.Redux.CodeFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.csprojAssemblyReference.cache
