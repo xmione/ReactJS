@@ -10,7 +10,9 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.0-preview.8.20407.4",
           "Microsoft.EntityFrameworkCore.Design": "5.0.0-preview.8.20407.4",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0-preview.8.20407.4"
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.0-preview.8.20407.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0-preview.8.20407.4",
+          "Microsoft.EntityFrameworkCore.Tools": "5.0.0-preview.8.20407.4"
         },
         "runtime": {
           "ReactJS.Redux.DatabaseFirst.dll": {}
@@ -143,6 +145,17 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/5.0.0-preview.8.20407.4": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.0-preview.8.20407.4"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.40704"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/5.0.0-preview.8.20407.4": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.0-preview.8.20407.4",
@@ -165,6 +178,11 @@
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.0.20.40704"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/5.0.0-preview.8.20407.4": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "5.0.0-preview.8.20407.4"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/5.0.0-preview.8.20407.11": {
@@ -1155,6 +1173,13 @@
       "path": "microsoft.entityframeworkcore.design/5.0.0-preview.8.20407.4",
       "hashPath": "microsoft.entityframeworkcore.design.5.0.0-preview.8.20407.4.nupkg.sha512"
     },
+    "Microsoft.EntityFrameworkCore.InMemory/5.0.0-preview.8.20407.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PbS7EHBMlc3dNk6EAODw4u/wK10fHu94VwJHwjPt3kOggXQGufXEC0krsbxpZtnp0Nog3a8BRlx4DgiDMRIsMA==",
+      "path": "microsoft.entityframeworkcore.inmemory/5.0.0-preview.8.20407.4",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.5.0.0-preview.8.20407.4.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore.Relational/5.0.0-preview.8.20407.4": {
       "type": "package",
       "serviceable": true,
@@ -1168,6 +1193,13 @@
       "sha512": "sha512-fjDtNyFocsC17Xr6UNqOuADvBqSlN9eLo1+eGt/pv0ME7QUBbhbqGv6XL2QQzNWXxgmU+pKHr2eOIUdw3CDeYw==",
       "path": "microsoft.entityframeworkcore.sqlserver/5.0.0-preview.8.20407.4",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.5.0.0-preview.8.20407.4.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/5.0.0-preview.8.20407.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QnUKp8m+uL12TcJfElRa4NMBt821rFo6EUfuulwzFRgfq1jrL8RHFOKcnwEznxBJMJF5snfnDe+J9nLoqdhsFg==",
+      "path": "microsoft.entityframeworkcore.tools/5.0.0-preview.8.20407.4",
+      "hashPath": "microsoft.entityframeworkcore.tools.5.0.0-preview.8.20407.4.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/5.0.0-preview.8.20407.11": {
       "type": "package",

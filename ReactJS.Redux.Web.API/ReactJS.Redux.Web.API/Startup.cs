@@ -34,7 +34,10 @@ namespace ReactJS.Redux.Web.API
             services.AddDbContext<RRCContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("RRCConnectionString")));
             services.AddControllers();
-            
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +58,8 @@ namespace ReactJS.Redux.Web.API
             {
                 endpoints.MapControllers();
             });
+
+            app.UseCors(options => options.AllowAnyOrigin());
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xFyvQtuqpYY0s2ljpN730A4pfVRs9je9ghzK2hfR/JhKvMO6AYA6AaflKZMn20aCd1fY7p9ns5QJhG7ttenU9A==",
+  "dgSpecHash": "yS2kULE82kpKhcNYXcOm/1PC6AdzBknYRnsez8hjtVib/wxsQ4Js+tva4Ry4lF8aCxDuV8bK1ZMTsLrgTMUIWw==",
   "success": true,
   "projectFilePath": "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj",
   "expectedPackageFiles": [
@@ -12,8 +12,10 @@
     "C:\\Users\\Work\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.0-preview.8.20407.4\\microsoft.entityframeworkcore.abstractions.5.0.0-preview.8.20407.4.nupkg.sha512",
     "C:\\Users\\Work\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.0-preview.8.20407.4\\microsoft.entityframeworkcore.analyzers.5.0.0-preview.8.20407.4.nupkg.sha512",
     "C:\\Users\\Work\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.0-preview.8.20407.4\\microsoft.entityframeworkcore.design.5.0.0-preview.8.20407.4.nupkg.sha512",
+    "C:\\Users\\Work\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\5.0.0-preview.8.20407.4\\microsoft.entityframeworkcore.inmemory.5.0.0-preview.8.20407.4.nupkg.sha512",
     "C:\\Users\\Work\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.0-preview.8.20407.4\\microsoft.entityframeworkcore.relational.5.0.0-preview.8.20407.4.nupkg.sha512",
     "C:\\Users\\Work\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.0-preview.8.20407.4\\microsoft.entityframeworkcore.sqlserver.5.0.0-preview.8.20407.4.nupkg.sha512",
+    "C:\\Users\\Work\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.0-preview.8.20407.4\\microsoft.entityframeworkcore.tools.5.0.0-preview.8.20407.4.nupkg.sha512",
     "C:\\Users\\Work\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0-preview.8.20407.11\\microsoft.extensions.caching.abstractions.5.0.0-preview.8.20407.11.nupkg.sha512",
     "C:\\Users\\Work\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0-preview.8.20407.11\\microsoft.extensions.caching.memory.5.0.0-preview.8.20407.11.nupkg.sha512",
     "C:\\Users\\Work\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0-preview.8.20407.11\\microsoft.extensions.configuration.abstractions.5.0.0-preview.8.20407.11.nupkg.sha512",

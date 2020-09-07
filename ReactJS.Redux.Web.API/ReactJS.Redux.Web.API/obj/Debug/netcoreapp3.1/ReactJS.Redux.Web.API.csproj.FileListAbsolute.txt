@@ -14,6 +14,7 @@ C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcorea
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
@@ -67,3 +68,15 @@ C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\obj\Debug\netcorea
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\obj\Debug\netcoreapp3.1\ReactJS.Redux.Web.API.dll
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\obj\Debug\netcoreapp3.1\ReactJS.Redux.Web.API.pdb
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\obj\Debug\netcoreapp3.1\ReactJS.Redux.Web.API.genruntimeconfig.cache
+C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll

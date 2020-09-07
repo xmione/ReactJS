@@ -51,7 +51,7 @@ namespace ReactJS.Redux.Web.API.Controllers
             return retVal;
             
         }
-        [HttpGet("dummy")]
+        [HttpPost("dummy")]
         public IEnumerable<Person> PopulateWithDummyData()
         {
             try
@@ -61,6 +61,9 @@ namespace ReactJS.Redux.Web.API.Controllers
                 builder.UseSqlServer(connString, null);
                 using (var context = new RRCContext())
                 {
+                    var person = new Person(){ ID = 1, FirstName = "Cynthia", MiddleName = "KungFu", LastName = "Luster", Email = "cynthialuster@test.com" };
+                    context.People.Add(person);
+                    context.SaveChanges();
                     if (context.Database.CanConnect())
                     {
                         // all good
@@ -68,6 +71,7 @@ namespace ReactJS.Redux.Web.API.Controllers
 
                         p.AddRange(people);
                         context.SaveChanges();
+                        people = p.ToArray();
                     }
                     else
                     {
