@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactJS.Redux.CodeFirst", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactJS.Redux.DatabaseFirst", "..\ReactJS.Redux.DatabaseFirst\ReactJS.Redux.DatabaseFirst.csproj", "{20E72A30-73AD-46F9-99B2-F7096A41638B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{A0B40DF3-4007-4B5C-B89E-B0C0926B6F2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{A0B40DF3-4007-4B5C-B89E-B0C0926B6F2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

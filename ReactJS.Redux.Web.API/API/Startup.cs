@@ -29,12 +29,13 @@ namespace API
         {
             //services.AddDbContext<TodoContext>(opt =>
             //   opt.UseInMemoryDatabase("TodoList"));
-            services.AddDbContextPool<TodoContext>(opt =>
-               opt.UseSqlServer(Configuration.GetConnectionString("RRCConnectionString")));
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddDbContext<TodoContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("RRCConnectionString")));
             
             services.AddControllers();
             //services.AddTransient<ITodoItemRepository, MockTodoItemRepository>();
             services.AddScoped<ITodoItemRepository, SQLTodoItemRepository>();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +56,8 @@ namespace API
             {
                 endpoints.MapControllers();
             });
+
+            app.UseCors(options => options.WithOrigins("*").AllowAnyOrigin());
         }
     }
 }
