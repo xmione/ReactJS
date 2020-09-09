@@ -1555,20 +1555,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "ReactJS.Redux.CodeFirst/1.0.0": {
+      "ReactJS.Redux.DatabaseFirst/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.0-preview.8.20407.4",
           "Microsoft.EntityFrameworkCore.InMemory": "5.0.0-preview.8.20407.4",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0-preview.8.20407.4",
-          "System.Configuration.ConfigurationManager": "5.0.0-preview.8.20407.11"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0-preview.8.20407.4"
         },
         "compile": {
-          "bin/placeholder/ReactJS.Redux.CodeFirst.dll": {}
+          "bin/placeholder/ReactJS.Redux.DatabaseFirst.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ReactJS.Redux.CodeFirst.dll": {}
+          "bin/placeholder/ReactJS.Redux.DatabaseFirst.dll": {}
         }
       }
     }
@@ -5962,10 +5961,10 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "ReactJS.Redux.CodeFirst/1.0.0": {
+    "ReactJS.Redux.DatabaseFirst/1.0.0": {
       "type": "project",
-      "path": "../../ReactJS.Redux.CodeFirst/ReactJS.Redux.CodeFirst.csproj",
-      "msbuildProject": "../../ReactJS.Redux.CodeFirst/ReactJS.Redux.CodeFirst.csproj"
+      "path": "../../ReactJS.Redux.DatabaseFirst/ReactJS.Redux.DatabaseFirst.csproj",
+      "msbuildProject": "../../ReactJS.Redux.DatabaseFirst/ReactJS.Redux.DatabaseFirst.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5976,7 +5975,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0-preview.8.20407.4",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0-preview.8.20407.4",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.10.9",
-      "ReactJS.Redux.CodeFirst >= 1.0.0",
+      "ReactJS.Redux.DatabaseFirst >= 1.0.0",
       "System.Configuration.ConfigurationManager >= 5.0.0-preview.8.20407.11"
     ]
   },
@@ -6013,8 +6012,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\GitHub\\ReactJS\\ReactJS.Redux.CodeFirst\\ReactJS.Redux.CodeFirst.csproj": {
-              "projectPath": "C:\\GitHub\\ReactJS\\ReactJS.Redux.CodeFirst\\ReactJS.Redux.CodeFirst.csproj"
+            "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj": {
+              "projectPath": "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj"
             }
           }
         }
@@ -6079,7 +6078,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -30,7 +30,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0-preview.8.20407.4",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.0-preview.8.20407.4",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.10.9",
-          "ReactJS.Redux.CodeFirst": "1.0.0",
+          "ReactJS.Redux.DatabaseFirst": "1.0.0",
           "System.Configuration.ConfigurationManager": "5.0.0-preview.8.20407.11",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -1519,18 +1519,17 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
-      "ReactJS.Redux.CodeFirst/1.0.0": {
+      "ReactJS.Redux.DatabaseFirst/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.0-preview.8.20407.4",
           "Microsoft.EntityFrameworkCore.InMemory": "5.0.0-preview.8.20407.4",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0-preview.8.20407.4",
-          "System.Configuration.ConfigurationManager": "5.0.0-preview.8.20407.11"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0-preview.8.20407.4"
         },
         "runtime": {
-          "ReactJS.Redux.CodeFirst.dll": {}
+          "ReactJS.Redux.DatabaseFirst.dll": {}
         },
         "compile": {
-          "ReactJS.Redux.CodeFirst.dll": {}
+          "ReactJS.Redux.DatabaseFirst.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -3831,7 +3830,7 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
-    "ReactJS.Redux.CodeFirst/1.0.0": {
+    "ReactJS.Redux.DatabaseFirst/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,91 +1,98 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-using ReactJS.Redux.CodeFirst;
-using ReactJS.Redux.CodeFirst.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
 using System;
+using ReactJS.Redux.DatabaseFirst.Models;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace ReactJS.Redux.Web.API.Controllers
 {
     [Produces("application/json")]
     [Route("api/people")]
-    public class PeopleController
+    [ApiController]
+    public class PeopleController : ControllerBase
     {
-        Person[] people = new Person[]
-        {
-            new Person {ID = 1, FirstName = "Cynthia", MiddleName = "KungFu", LastName = "Luster", Email = "cynthialuster@test.com" },
-            new Person {ID = 2, FirstName = "Bat", MiddleName = "Na", LastName = "Man", Email = "batman@test.com" },
-            new Person {ID = 3, FirstName = "Spider", MiddleName = "Web", LastName = "Man", Email = "spiderman@test.com" },
-            new Person {ID = 4, FirstName = "Super", MiddleName = "Dooper", LastName = "Man", Email = "superman@test.com" }
-        };
+        private readonly IPersonRepository _repository;
 
+        public PeopleController(IPersonRepository repository)
+        {
+            _repository = repository;
+        }
+
+        // GET: api/people
         [HttpGet]
-        public IEnumerable<Person> ListAllPeople()
-        {
-            return people;
-        }
-
-        [HttpGet("id/{idart}")]
-        public IEnumerable<Person> ListPeopleByID(string idart)
-        {
-             IEnumerable<Person> retVal =
-                from g in people 
-                where g.ID.Equals(idart) 
-                select g;
-
-            return retVal;
-
-        }
-
-        [HttpGet("firstName/{firstart}")]
-        public IEnumerable<Person> ListPeopleByFirstName(string firstart)
-        {
-            IEnumerable<Person> retVal = 
-                from g in people
-                where g.FirstName.ToUpper().Contains(firstart.ToUpper())
-                orderby g.FirstName
-                select g;
-                
-            return retVal;
-            
-        }
-        [HttpPost("dummy")]
-        public IEnumerable<Person> PopulateWithDummyData()
+        public async Task<ActionResult> GetAll()
         {
             try
             {
-                var connString = ConfigurationManager.ConnectionStrings["RRCConnectionString"].ConnectionString;
-                var builder = new DbContextOptionsBuilder<RRCContext>();
-                builder.UseSqlServer(connString, null);
-                using (var context = new RRCContext())
-                {
-                    var person = new Person(){ ID = 1, FirstName = "Cynthia", MiddleName = "KungFu", LastName = "Luster", Email = "cynthialuster@test.com" };
-                    context.People.Add(person);
-                    context.SaveChanges();
-                    if (context.Database.CanConnect())
-                    {
-                        // all good
-                        var p = (from pl in context.People select pl).ToList();
-
-                        p.AddRange(people);
-                        context.SaveChanges();
-                        people = p.ToArray();
-                    }
-                    else
-                    {
-                        throw new Exception("Failure connecting to database server.");
-                    }
-                    
-                }
-
+                return Ok(await _repository.GetAll());
             }
             catch (Exception ex)
             {
-                var exceptionTypeName = ex.GetType().Name;
-            }            
-            return people;
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database. " + ex.Message);
+            }
+        }
+
+        // GET: api/TodoItems/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Person>> Get(int id)
+        {
+            try
+            {
+                return Ok(await _repository.Get(id));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database. " + ex.Message);
+            }
+        }
+
+        // PUT: api/TodoItems/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(long id, Person item)
+        {
+            if (id != item.Id)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                return Ok(await _repository.Add(item));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database. " + ex.Message);
+            }
+        }
+
+        // POST: api/TodoItems
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPost]
+        public async Task<ActionResult<Person>> PostTodoItem(Person item)
+        {
+            try
+            {
+                return Ok(await _repository.Add(item));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database. " + ex.Message);
+            }
+        }
+
+        // DELETE: api/TodoItems/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+
+            _repository.Delete(id);
 
         }
     }

@@ -16,15 +16,18 @@ namespace API.Models
             _todoItemList.Add(new TodoItem() { Id = 3, IsComplete = true, Name = "Name3" });
             _todoItemList.Add(new TodoItem() { Id = 4, IsComplete = false, Name = "Name4" });
         }
-        public TodoItem Add(TodoItem todoItem)
+        public async Task<TodoItem> Add(TodoItem todoItem)
         {
-            todoItem.Id = _todoItemList.Max(e => e.Id) + 1;
-            _todoItemList.Add(todoItem);
+            await Task.Run(() => 
+            {
+                todoItem.Id = _todoItemList.Max(e => e.Id) + 1;
+                _todoItemList.Add(todoItem);
+            });
 
             return todoItem;
         }
 
-        public TodoItem Delete(int id)
+        public void Delete(int id)
         {
             TodoItem todoItem = _todoItemList.FirstOrDefault(t => t.Id == id);
             if (todoItem != null)
@@ -32,28 +35,45 @@ namespace API.Models
                 //found, delete
                 _todoItemList.Remove(todoItem);
             }
+            
+        }
+
+        public async Task<IEnumerable<TodoItem>> GetAll()
+        {
+            List<TodoItem> list = null;
+            await Task.Run(() => 
+            {
+                list = _todoItemList;
+            });
+
+            return list;
+        }
+
+        public async Task<TodoItem> Get(int id)
+        {
+            TodoItem todoItem = null;
+            await Task.Run(() => 
+            {
+                todoItem = _todoItemList.FirstOrDefault(t => t.Id == id);
+            });
+            
             return todoItem;
         }
 
-        public IEnumerable<TodoItem> GetAllTodoItems()
+        public async Task<TodoItem> Update(TodoItem newTodoItem)
         {
-            return _todoItemList;
-        }
-
-        public TodoItem GetTodoItem(int id)
-        {
-            return _todoItemList.FirstOrDefault(t => t.Id == id);
-        }
-
-        public TodoItem Update(TodoItem newTodoItem)
-        {
-            TodoItem todoItem = _todoItemList.FirstOrDefault(t => t.Id == newTodoItem.Id);
-            if (todoItem != null)
+            TodoItem todoItem = null;
+            await Task.Run(() => 
             {
-                //found, update
-                todoItem.IsComplete = newTodoItem.IsComplete;
-                todoItem.Name = newTodoItem.Name;
-            }
+                todoItem = _todoItemList.FirstOrDefault(t => t.Id == newTodoItem.Id);
+                if (todoItem != null)
+                {
+                    //found, update
+                    todoItem.IsComplete = newTodoItem.IsComplete;
+                    todoItem.Name = newTodoItem.Name;
+                }
+            });
+            
             return todoItem;
         }
     }

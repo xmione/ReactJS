@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ReactJS.Redux.CodeFirst\ReactJS.Redux.CodeFirst.csproj" />
+    <ProjectReference Include="..\..\ReactJS.Redux.DatabaseFirst\ReactJS.Redux.DatabaseFirst.csproj" />
   </ItemGroup>
 
 

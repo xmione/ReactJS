@@ -4,14 +4,14 @@
     "C:\\GitHub\\ReactJS\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API.csproj": {}
   },
   "projects": {
-    "C:\\GitHub\\ReactJS\\ReactJS.Redux.CodeFirst\\ReactJS.Redux.CodeFirst.csproj": {
+    "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\ReactJS\\ReactJS.Redux.CodeFirst\\ReactJS.Redux.CodeFirst.csproj",
-        "projectName": "ReactJS.Redux.CodeFirst",
-        "projectPath": "C:\\GitHub\\ReactJS\\ReactJS.Redux.CodeFirst\\ReactJS.Redux.CodeFirst.csproj",
+        "projectUniqueName": "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj",
+        "projectName": "ReactJS.Redux.DatabaseFirst",
+        "projectPath": "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj",
         "packagesPath": "C:\\Users\\Work\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\ReactJS\\ReactJS.Redux.CodeFirst\\obj\\",
+        "outputPath": "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -67,10 +67,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.0-preview.8.20407.4, )"
-            },
-            "System.Configuration.ConfigurationManager": {
-              "target": "Package",
-              "version": "[5.0.0-preview.8.20407.11, )"
             }
           },
           "imports": [
@@ -88,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -121,8 +117,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\GitHub\\ReactJS\\ReactJS.Redux.CodeFirst\\ReactJS.Redux.CodeFirst.csproj": {
-                "projectPath": "C:\\GitHub\\ReactJS\\ReactJS.Redux.CodeFirst\\ReactJS.Redux.CodeFirst.csproj"
+              "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj": {
+                "projectPath": "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj"
               }
             }
           }
@@ -187,7 +183,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

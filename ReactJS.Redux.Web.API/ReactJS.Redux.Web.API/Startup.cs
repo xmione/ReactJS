@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,8 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using ReactJS.Redux.CodeFirst;
-using ReactJS.Redux.CodeFirst.Models;
+using ReactJS.Redux.DatabaseFirst.Models;
 
 namespace ReactJS.Redux.Web.API
 {
@@ -34,6 +34,7 @@ namespace ReactJS.Redux.Web.API
             services.AddDbContext<RRCContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("RRCConnectionString")));
             services.AddControllers();
+            services.AddScoped<IPersonRepository, SQLPersonRepository>();
             services.AddCors(c =>
             {
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());

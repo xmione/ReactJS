@@ -14,43 +14,43 @@ namespace API.Models
         {
             this._context = context;
         }
-        public TodoItem Add(TodoItem todoItem)
+        public async Task<IEnumerable<TodoItem>> GetAll()
         {
-            _context.Add(todoItem);
-            _context.SaveChanges();
+            return await _context.TodoItems.ToListAsync();
+        }
+        public async Task<TodoItem> Get(int id)
+        {
+            return await _context.TodoItems.FirstOrDefaultAsync(t => t.Id == id);
+        }
+        public async Task<TodoItem> Add(TodoItem todoItem)
+        {
+            var result = await _context.AddAsync(todoItem);
+            await _context.SaveChangesAsync();
 
-            return todoItem;
+            return result.Entity;
         }
 
-        public TodoItem Delete(int id)
+        public async void Delete(int id)
         {
-            var todoItem = _context.TodoItems.Find(id);
-            if (todoItem != null)
+            var result = _context.TodoItems.FirstOrDefault(t => t.Id == id);
+            
+            if (result != null)
             {
-                _context.TodoItems.Remove(todoItem);
-                _context.SaveChanges();
+                _context.TodoItems.Remove(result);
+                await _context.SaveChangesAsync();
             }
-
-            return todoItem;
         }
-
-        public IEnumerable<TodoItem> GetAllTodoItems()
+        public async Task<TodoItem> Update(TodoItem newTodoItem)
         {
-            return _context.TodoItems;
-        }
-
-        public TodoItem GetTodoItem(int id)
-        {
-            return _context.TodoItems.FirstOrDefault(t => t.Id == id);
-        }
-
-        public TodoItem Update(TodoItem newTodoItem)
-        {
-            var todoItem = _context.TodoItems.Attach(newTodoItem);
-            todoItem.State = EntityState.Modified;
-            _context.SaveChanges();
-
-            return newTodoItem;
+            var result = _context.TodoItems.FirstOrDefault(t => t.Id == newTodoItem.Id);
+            if (result != null)
+            {
+                result.IsComplete = newTodoItem.IsComplete;
+                result.Name = newTodoItem.Name;
+                await _context.SaveChangesAsync();
+            }
+            
+            return result;
         }
     }
 }

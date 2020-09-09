@@ -7,10 +7,10 @@ namespace API.Models
 {
     public interface ITodoItemRepository
     {
-        TodoItem GetTodoItem(int id);
-        IEnumerable<TodoItem> GetAllTodoItems();
-        TodoItem Add(TodoItem todoItem);
-        TodoItem Update(TodoItem todoItem);
-        TodoItem Delete(int id);
+        Task<IEnumerable<TodoItem>> GetAll();
+        Task<TodoItem> Get(int id);
+        Task<TodoItem> Add(TodoItem todoItem);
+        Task<TodoItem> Update(TodoItem todoItem);
+        void Delete(int id);
     }
 }

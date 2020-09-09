@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace ReactJS.Redux.DatabaseFirst
+namespace ReactJS.Redux.DatabaseFirst.Models
 {
     public partial class Person
     {

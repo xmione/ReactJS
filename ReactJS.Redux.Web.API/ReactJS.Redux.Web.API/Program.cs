@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using ReactJS.Redux.CodeFirst;
-using ReactJS.Redux.CodeFirst.Models;
 
 namespace ReactJS.Redux.Web.API
 {
