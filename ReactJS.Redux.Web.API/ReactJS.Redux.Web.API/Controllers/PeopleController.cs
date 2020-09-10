@@ -34,6 +34,20 @@ namespace ReactJS.Redux.Web.API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database. " + ex.Message);
             }
         }
+        // GET: api/people/addmockdata
+        
+        [HttpGet("addmockdata")]
+        public async Task<ActionResult> AddMockData()
+        {
+            try
+            {
+                return Ok(await _repository.AddMockData());
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database. " + ex.Message);
+            }
+        }
 
         // GET: api/TodoItems/5
         [HttpGet("{id}")]

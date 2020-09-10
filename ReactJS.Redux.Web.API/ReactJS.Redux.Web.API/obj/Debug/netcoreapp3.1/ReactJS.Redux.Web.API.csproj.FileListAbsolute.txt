@@ -1,9 +1,7 @@
-C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\App.config
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\appsettings.json
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\ReactJS.Redux.Web.API.exe
-C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\ReactJS.Redux.Web.API.dll.config
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\ReactJS.Redux.Web.API.deps.json
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\ReactJS.Redux.Web.API.runtimeconfig.json
 C:\GitHub\ReactJS\ReactJS.Redux.Web.API\ReactJS.Redux.Web.API\bin\Debug\netcoreapp3.1\ReactJS.Redux.Web.API.runtimeconfig.dev.json

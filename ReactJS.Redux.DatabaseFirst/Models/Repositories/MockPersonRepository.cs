@@ -89,5 +89,10 @@ namespace ReactJS.Redux.DatabaseFirst.Models.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public Task<IEnumerable<Person>> AddMockData()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

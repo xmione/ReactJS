@@ -19,14 +19,32 @@ namespace ReactJS.Redux.DatabaseFirst.Models.Repositories
 
             return await mockRepo.GetAll();
         }
-        public async Task<IEnumerable<Person>> GetAll()
+        public async Task<IEnumerable<Person>> AddMockData()
         {
-            var people = _context.People.ToListAsync().Result;
+            var mockRepo = new MockPersonRepository();
+            var mockList = await mockRepo.GetAll();
+            var people = _context.People;
             if (people.Count() == 0)
             {
-                people = (List<Person>)await GetMockData();
+                using (var transaction = _context.Database.BeginTransaction())
+                {
+                    await _context.People.AddRangeAsync(mockList);
+                    await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT [dbo].[People] ON");
+                    await _context.SaveChangesAsync();
+                    await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT [dbo].[People] OFF");
+                    
+                    transaction.Commit();
+                }
             }
-
+            return mockList;
+        }
+        public async Task<IEnumerable<Person>> GetAll()
+        {
+            var people = await _context.People.ToListAsync();
+            //if (people.Count() == 0)
+            //{
+            //    people = (List<Person>)await GetMockData();
+            //}
             return people;
         }
         public async Task<Person> Get(int id)

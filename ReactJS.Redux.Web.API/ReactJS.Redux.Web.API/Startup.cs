@@ -34,7 +34,7 @@ namespace ReactJS.Redux.Web.API
                 //{
                 //    conn.Open();
                 //}
-                services.AddDbContext<RRCContext>(options => options.UseSqlServer(Configuration["ConnectionString:RRCConnetionString"]));
+                services.AddDbContext<RRCContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:RRCConnectionString"]));
                 services.AddScoped<IDataRepository<Person>, SQLPersonRepository>();
                 services.AddControllers();
                 
