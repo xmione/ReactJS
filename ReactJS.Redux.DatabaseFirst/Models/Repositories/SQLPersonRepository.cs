@@ -1,19 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ReactJS.Redux.DatabaseFirst.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
-namespace API.Models
+namespace ReactJS.Redux.DatabaseFirst.Models.Repositories
 {
-    public class SQLPersonRepository : IPersonRepository
+    public class SQLPersonRepository : IDataRepository<Person>
     {
-        private readonly RRCContext _context;
+        readonly RRCContext _context;
 
         public SQLPersonRepository(RRCContext context)
         {
-            this._context = context;
+            _context = context;
         }
         public async Task<IEnumerable<Person>> GetMockData()
         {
@@ -43,29 +41,30 @@ namespace API.Models
             return result.Entity;
         }
 
+        public async Task<Person> Update(Person newEntity)
+        {
+            var result = _context.People.FirstOrDefault(t => t.Id == newEntity.Id);
+            if (result != null)
+            {
+                result.Email = newEntity.Email;
+                result.FirstName = newEntity.FirstName;
+                result.MiddleName = newEntity.MiddleName;
+                result.LastName = newEntity.LastName;
+                await _context.SaveChangesAsync();
+            }
+
+            return result;
+        }
+
         public async void Delete(int id)
         {
             var result = _context.People.FirstOrDefault(t => t.Id == id);
-            
+
             if (result != null)
             {
                 _context.People.Remove(result);
                 await _context.SaveChangesAsync();
             }
-        }
-        public async Task<Person> Update(Person newItem)
-        {
-            var result = _context.People.FirstOrDefault(t => t.Id == newItem.Id);
-            if (result != null)
-            {
-                result.Email = newItem.Email;
-                result.FirstName = newItem.FirstName;
-                result.MiddleName = newItem.MiddleName;
-                result.LastName = newItem.LastName;
-                await _context.SaveChangesAsync();
-            }
-            
-            return result;
         }
     }
 }

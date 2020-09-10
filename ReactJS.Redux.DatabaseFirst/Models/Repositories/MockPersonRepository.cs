@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace API.Models
+namespace ReactJS.Redux.DatabaseFirst.Models.Repositories
 {
-    public class MockPersonRepository : IPersonRepository
+    public class MockPersonRepository : IDataRepository<Person>
     {
         private List<Person> _list;
         public MockPersonRepository()
@@ -78,6 +78,16 @@ namespace API.Models
             });
             
             return item;
+        }
+
+        public Task<Person> Update(Person sourceEntity, Person targtEntity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Person entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

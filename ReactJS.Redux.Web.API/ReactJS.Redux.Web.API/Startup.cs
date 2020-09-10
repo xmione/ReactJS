@@ -1,18 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using API.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using ReactJS.Redux.DatabaseFirst.Models;
+using ReactJS.Redux.DatabaseFirst.Models.Repositories;
+using System;
 
 namespace ReactJS.Redux.Web.API
 {
@@ -28,17 +22,32 @@ namespace ReactJS.Redux.Web.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //var connString = Configuration.GetSection("RRCConnectionString").ToString();
-            // Add EF services to the services container.
-            //services.AddDbContext<RRCContext>(options =>options.UseSqlServer(connString, null)); //==> oftentimes this one line is missing
-            services.AddDbContext<RRCContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("RRCConnectionString")));
-            services.AddControllers();
-            services.AddScoped<IPersonRepository, SQLPersonRepository>();
-            services.AddCors(c =>
+            try 
             {
-                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
-            });
+                //var connString = Configuration.GetConnectionString("RRCConnectionString");
+                //var connString = "Data Source=(local);Initial Catalog=RRC;Integrated Security=True;";
+                // Add EF services to the services container.
+                //services.AddDbContext<RRCContext>(options =>options.UseSqlServer(connString, null)); //==> oftentimes this one line is missing
+                //var conn = new SqlConnection(connString);
+                
+                //if (conn.State == System.Data.ConnectionState.Closed)
+                //{
+                //    conn.Open();
+                //}
+                services.AddDbContext<RRCContext>(options => options.UseSqlServer(Configuration["ConnectionString:RRCConnetionString"]));
+                services.AddScoped<IDataRepository<Person>, SQLPersonRepository>();
+                services.AddControllers();
+                
+                //services.AddCors(c =>
+                //{
+                //    c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+                //});
+            }
+            catch (Exception ex) 
+            {
+                var exceptionTypeName = ex.GetType().Name;
+                throw new Exception("Error opening the connection [" + exceptionTypeName + "]", ex.InnerException);
+            }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,7 +69,7 @@ namespace ReactJS.Redux.Web.API
                 endpoints.MapControllers();
             });
 
-            app.UseCors(options => options.AllowAnyOrigin());
+            //app.UseCors(options => options.AllowAnyOrigin());
         }
     }
 }

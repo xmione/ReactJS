@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactJS.Redux.DatabaseFirst
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{A0B40DF3-4007-4B5C-B89E-B0C0926B6F2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{8D939C9D-8719-4D84-9A27-B23EEBF45A76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test", "test\test.csproj", "{8D939C9D-8719-4D84-9A27-B23EEBF45A76}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreCodeFirstSample", "..\..\ef-code-first\EFCoreCodeFirstSample\EFCoreCodeFirstSample\EFCoreCodeFirstSample.csproj", "{27AFC14A-F6DC-44C5-A206-690CC6A9CBDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{8D939C9D-8719-4D84-9A27-B23EEBF45A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D939C9D-8719-4D84-9A27-B23EEBF45A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D939C9D-8719-4D84-9A27-B23EEBF45A76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27AFC14A-F6DC-44C5-A206-690CC6A9CBDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27AFC14A-F6DC-44C5-A206-690CC6A9CBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27AFC14A-F6DC-44C5-A206-690CC6A9CBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27AFC14A-F6DC-44C5-A206-690CC6A9CBDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

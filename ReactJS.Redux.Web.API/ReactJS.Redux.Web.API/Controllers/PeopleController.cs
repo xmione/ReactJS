@@ -1,12 +1,11 @@
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using System.Configuration;
-using System;
-using ReactJS.Redux.DatabaseFirst.Models;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using ReactJS.Redux.DatabaseFirst.Models;
+using ReactJS.Redux.DatabaseFirst.Models.Repositories;
+using System;
+using System.Threading.Tasks;
+
+
 
 namespace ReactJS.Redux.Web.API.Controllers
 {
@@ -15,9 +14,9 @@ namespace ReactJS.Redux.Web.API.Controllers
     [ApiController]
     public class PeopleController : ControllerBase
     {
-        private readonly IPersonRepository _repository;
+        private readonly IDataRepository<Person> _repository;
 
-        public PeopleController(IPersonRepository repository)
+        public PeopleController(IDataRepository<Person> repository)
         {
             _repository = repository;
         }
