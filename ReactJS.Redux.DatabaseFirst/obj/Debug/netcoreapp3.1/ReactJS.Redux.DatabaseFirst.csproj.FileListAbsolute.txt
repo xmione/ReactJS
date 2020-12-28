@@ -11,3 +11,15 @@ C:\GitHub\ReactJS\ReactJS.Redux.DatabaseFirst\obj\Debug\netcoreapp3.1\ReactJS.Re
 C:\GitHub\ReactJS\ReactJS.Redux.DatabaseFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.csproj.CoreCompileInputs.cache
 C:\GitHub\ReactJS\ReactJS.Redux.DatabaseFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.csprojAssemblyReference.cache
 C:\GitHub\ReactJS\ReactJS.Redux.DatabaseFirst\bin\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.dll.config
+D:\ReactJS\ReactJS.Redux.DatabaseFirst\bin\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.dll.config
+D:\ReactJS\ReactJS.Redux.DatabaseFirst\bin\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.deps.json
+D:\ReactJS\ReactJS.Redux.DatabaseFirst\bin\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.runtimeconfig.json
+D:\ReactJS\ReactJS.Redux.DatabaseFirst\bin\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.runtimeconfig.dev.json
+D:\ReactJS\ReactJS.Redux.DatabaseFirst\bin\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.dll
+D:\ReactJS\ReactJS.Redux.DatabaseFirst\bin\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.pdb
+D:\ReactJS\ReactJS.Redux.DatabaseFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.AssemblyInfoInputs.cache
+D:\ReactJS\ReactJS.Redux.DatabaseFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.AssemblyInfo.cs
+D:\ReactJS\ReactJS.Redux.DatabaseFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.csproj.CoreCompileInputs.cache
+D:\ReactJS\ReactJS.Redux.DatabaseFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.dll
+D:\ReactJS\ReactJS.Redux.DatabaseFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.pdb
+D:\ReactJS\ReactJS.Redux.DatabaseFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.DatabaseFirst.genruntimeconfig.cache

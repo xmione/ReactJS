@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;CF</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReactJS.Redux.CodeFirst\ReactJS.Redux.CodeFirst.csproj" />
+    <ProjectReference Include="..\ReactJS.Redux.DatabaseFirst\ReactJS.Redux.DatabaseFirst.csproj" />
+  </ItemGroup>
+
+</Project>

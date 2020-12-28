@@ -1,11 +1,16 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ReactJS.Redux.DatabaseFirst.Models;
-using ReactJS.Redux.DatabaseFirst.Models.Repositories;
+#if CF
+    using EF = ReactJS.Redux.CodeFirst;
+    using EFModels = ReactJS.Redux.CodeFirst.Models;
+#else
+    using EF = ReactJS.Redux.DatabaseFirst;
+    using EFModels = ReactJS.Redux.DatabaseFirst.Models;
+#endif
+
 using System;
 using System.Threading.Tasks;
-
-
+using ReactJS.Redux.Repositories;
 
 namespace ReactJS.Redux.Web.API.Controllers
 {
@@ -14,9 +19,9 @@ namespace ReactJS.Redux.Web.API.Controllers
     [ApiController]
     public class PeopleController : ControllerBase
     {
-        private readonly IDataRepository<Person> _repository;
+        private readonly IDataRepository<EFModels.Person> _repository;
 
-        public PeopleController(IDataRepository<Person> repository)
+        public PeopleController(IDataRepository<EFModels.Person> repository)
         {
             _repository = repository;
         }
@@ -51,7 +56,7 @@ namespace ReactJS.Redux.Web.API.Controllers
 
         // GET: api/TodoItems/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Person>> Get(int id)
+        public async Task<ActionResult<EFModels.Person>> Get(int id)
         {
             try
             {
@@ -67,7 +72,7 @@ namespace ReactJS.Redux.Web.API.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(long id, Person item)
+        public async Task<IActionResult> Put(long id, EFModels.Person item)
         {
             if (id != item.Id)
             {
@@ -88,7 +93,7 @@ namespace ReactJS.Redux.Web.API.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Person>> PostTodoItem(Person item)
+        public async Task<ActionResult<EFModels.Person>> PostTodoItem(EFModels.Person item)
         {
             try
             {

@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ReactJS.Redux.CodeFirst.Models;
+using ReactJS.Redux.CodeFirst;
 
 namespace ReactJS.Redux.CodeFirst.Migrations
 {
     [DbContext(typeof(RRCContext))]
-    [Migration("20200904072734_InitialCreate")]
+    [Migration("20201228153041_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,13 +18,14 @@ namespace ReactJS.Redux.CodeFirst.Migrations
             modelBuilder
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.0-preview.8.20407.4");
+                .HasAnnotation("ProductVersion", "5.0.1");
 
             modelBuilder.Entity("ReactJS.Redux.CodeFirst.Models.Person", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
+                        .HasColumnName("ID")
                         .UseIdentityColumn();
 
                     b.Property<string>("Email")
@@ -39,7 +40,7 @@ namespace ReactJS.Redux.CodeFirst.Migrations
                     b.Property<string>("MiddleName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("People");
                 });

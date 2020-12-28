@@ -40,7 +40,7 @@ namespace ReactJS.Redux.CodeFirst
             {
                 entity.HasAnnotation("Relational:IsTableExcludedFromMigrations", false);
 
-                entity.Property(e => e.ID).HasColumnName("ID");
+                entity.Property(e => e.Id).HasColumnName("ID");
             });
 
             OnModelCreatingPartial(modelBuilder);

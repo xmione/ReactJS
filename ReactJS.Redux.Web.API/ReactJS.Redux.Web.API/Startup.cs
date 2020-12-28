@@ -4,8 +4,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ReactJS.Redux.DatabaseFirst.Models;
-using ReactJS.Redux.DatabaseFirst.Models.Repositories;
+using ReactJS.Redux.Repositories;
+#if CF
+using EF = ReactJS.Redux.CodeFirst;
+using EFModels = ReactJS.Redux.CodeFirst.Models;
+#else
+    using EF = ReactJS.Redux.DatabasEFModelsirst;
+    using EFModels = ReactJS.Redux.DatabasEFModelsirst.Models;
+#endif
 using System;
 
 namespace ReactJS.Redux.Web.API
@@ -34,8 +40,8 @@ namespace ReactJS.Redux.Web.API
                 //{
                 //    conn.Open();
                 //}
-                services.AddDbContext<RRCContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:RRCConnectionString"]));
-                services.AddScoped<IDataRepository<Person>, SQLPersonRepository>();
+                services.AddDbContext<EF.RRCContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:RRCConnectionString"]));
+                services.AddScoped<IDataRepository<EFModels.Person>, SQLPersonRepository>();
                 services.AddControllers();
                 
                 //services.AddCors(c =>

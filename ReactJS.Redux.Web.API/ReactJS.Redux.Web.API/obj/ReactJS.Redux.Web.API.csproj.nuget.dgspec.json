@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHub\\ReactJS\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API.csproj": {}
+    "D:\\ReactJS\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API.csproj": {}
   },
   "projects": {
-    "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj": {
+    "D:\\ReactJS\\ReactJS.Redux.CodeFirst\\ReactJS.Redux.CodeFirst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj",
-        "projectName": "ReactJS.Redux.DatabaseFirst",
-        "projectPath": "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj",
+        "projectUniqueName": "D:\\ReactJS\\ReactJS.Redux.CodeFirst\\ReactJS.Redux.CodeFirst.csproj",
+        "projectName": "ReactJS.Redux.CodeFirst",
+        "projectPath": "D:\\ReactJS\\ReactJS.Redux.CodeFirst\\ReactJS.Redux.CodeFirst.csproj",
         "packagesPath": "C:\\Users\\Work\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\obj\\",
+        "outputPath": "D:\\ReactJS\\ReactJS.Redux.CodeFirst\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -26,12 +26,11 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Work\\ExcelDataReader\\src\\ExcelDataReader.DataSet\\bin\\Release": {},
-          "C:\\Work\\ExcelDataReader\\src\\ExcelDataReader\\bin\\Release": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -43,30 +42,35 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0-preview.8.20407.4, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0-preview.8.20407.4, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[5.0.0-preview.8.20407.4, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.0-preview.8.20407.4, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0-preview.8.20407.4, )"
+              "version": "[5.0.1, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -84,18 +88,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\GitHub\\ReactJS\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API.csproj": {
+    "D:\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\ReactJS\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API.csproj",
-        "projectName": "ReactJS.Redux.Web.API",
-        "projectPath": "C:\\GitHub\\ReactJS\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API.csproj",
+        "projectUniqueName": "D:\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj",
+        "projectName": "ReactJS.Redux.DatabaseFirst",
+        "projectPath": "D:\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj",
         "packagesPath": "C:\\Users\\Work\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\ReactJS\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API\\obj\\",
+        "outputPath": "D:\\ReactJS\\ReactJS.Redux.DatabaseFirst\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -110,15 +114,105 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Work\\ExcelDataReader\\src\\ExcelDataReader.DataSet\\bin\\Release": {},
-          "C:\\Work\\ExcelDataReader\\src\\ExcelDataReader\\bin\\Release": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ReactJS\\ReactJS.Redux.Repositories\\ReactJS.Redux.Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ReactJS\\ReactJS.Redux.Repositories\\ReactJS.Redux.Repositories.csproj",
+        "projectName": "ReactJS.Redux.Repositories",
+        "projectPath": "D:\\ReactJS\\ReactJS.Redux.Repositories\\ReactJS.Redux.Repositories.csproj",
+        "packagesPath": "C:\\Users\\Work\\.nuget\\packages\\",
+        "outputPath": "D:\\ReactJS\\ReactJS.Redux.Repositories\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Work\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj": {
-                "projectPath": "C:\\GitHub\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj"
+              "D:\\ReactJS\\ReactJS.Redux.CodeFirst\\ReactJS.Redux.CodeFirst.csproj": {
+                "projectPath": "D:\\ReactJS\\ReactJS.Redux.CodeFirst\\ReactJS.Redux.CodeFirst.csproj"
+              },
+              "D:\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj": {
+                "projectPath": "D:\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj"
               }
             }
           }
@@ -131,30 +225,99 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ReactJS\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ReactJS\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API.csproj",
+        "projectName": "ReactJS.Redux.Web.API",
+        "projectPath": "D:\\ReactJS\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API.csproj",
+        "packagesPath": "C:\\Users\\Work\\.nuget\\packages\\",
+        "outputPath": "D:\\ReactJS\\ReactJS.Redux.Web.API\\ReactJS.Redux.Web.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Work\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\ReactJS\\ReactJS.Redux.CodeFirst\\ReactJS.Redux.CodeFirst.csproj": {
+                "projectPath": "D:\\ReactJS\\ReactJS.Redux.CodeFirst\\ReactJS.Redux.CodeFirst.csproj"
+              },
+              "D:\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj": {
+                "projectPath": "D:\\ReactJS\\ReactJS.Redux.DatabaseFirst\\ReactJS.Redux.DatabaseFirst.csproj"
+              },
+              "D:\\ReactJS\\ReactJS.Redux.Repositories\\ReactJS.Redux.Repositories.csproj": {
+                "projectPath": "D:\\ReactJS\\ReactJS.Redux.Repositories\\ReactJS.Redux.Repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0-preview.8.20407.4, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0-preview.8.20407.4, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[5.0.0-preview.8.20407.4, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.0-preview.8.20407.4, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0-preview.8.20407.4, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
@@ -162,7 +325,7 @@
             },
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
-              "version": "[5.0.0-preview.8.20407.11, )"
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -183,7 +346,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
