@@ -30,12 +30,16 @@ namespace ReactJS.Redux.Web.API
         {
             try 
             {
+                services.AddCors(c =>
+                {
+                    c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+                });
                 //var connString = Configuration.GetConnectionString("RRCConnectionString");
                 //var connString = "Data Source=(local);Initial Catalog=RRC;Integrated Security=True;";
                 // Add EF services to the services container.
                 //services.AddDbContext<RRCContext>(options =>options.UseSqlServer(connString, null)); //==> oftentimes this one line is missing
                 //var conn = new SqlConnection(connString);
-                
+
                 //if (conn.State == System.Data.ConnectionState.Closed)
                 //{
                 //    conn.Open();
@@ -44,10 +48,7 @@ namespace ReactJS.Redux.Web.API
                 services.AddScoped<IDataRepository<EFModels.Person>, SQLPersonRepository>();
                 services.AddControllers();
                 
-                //services.AddCors(c =>
-                //{
-                //    c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
-                //});
+                
             }
             catch (Exception ex) 
             {
@@ -59,6 +60,8 @@ namespace ReactJS.Redux.Web.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -68,6 +71,9 @@ namespace ReactJS.Redux.Web.API
 
             app.UseRouting();
 
+            //app.UseCors(options => options.WithOrigins("https://localhost:44337"));
+            app.UseCors(options => options.AllowAnyOrigin());
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -75,7 +81,7 @@ namespace ReactJS.Redux.Web.API
                 endpoints.MapControllers();
             });
 
-            //app.UseCors(options => options.AllowAnyOrigin());
+            
         }
     }
 }

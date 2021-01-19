@@ -11,11 +11,12 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 using ReactJS.Redux.Repositories;
+using Microsoft.AspNetCore.Cors;
 
 namespace ReactJS.Redux.Web.API.Controllers
 {
     [Produces("application/json")]
-    [Route("api/people")]
+    [Route("[controller]")]
     [ApiController]
     public class PeopleController : ControllerBase
     {
@@ -28,6 +29,7 @@ namespace ReactJS.Redux.Web.API.Controllers
 
         // GET: api/people
         [HttpGet]
+        [EnableCors("AllowOrigin")]
         public async Task<ActionResult> GetAll()
         {
             try

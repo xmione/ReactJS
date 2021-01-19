@@ -3,19 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ReactJS.Redux.Repositories;
-using System;
-#if CF
-using EF = ReactJS.Redux.CodeFirst;
-    using EFModels = ReactJS.Redux.CodeFirst.Models;
-#else
-using EF = ReactJS.Redux.DatabaseFirst;
-using EFModels = ReactJS.Redux.DatabaseFirst.Models;
-#endif
 
 namespace ReactJS.Redux.Web
 {
@@ -31,26 +21,18 @@ namespace ReactJS.Redux.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            try
-            {
-                services.AddControllersWithViews();
+            services.AddControllersWithViews();
 
-                // In production, the React files will be served from this directory
-                services.AddSpaStaticFiles(configuration =>
-                {
-                    configuration.RootPath = "ClientApp/build";
-                });
-
-                services.AddDbContext<EF.RRCContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:RRCConnectionString"]));
-                services.AddScoped<IDataRepository<EFModels.Person>, SQLPersonRepository>();
-                services.AddControllers();
-            }
-            catch (Exception ex)
+            // In production, the React files will be served from this directory
+            services.AddSpaStaticFiles(configuration =>
             {
-                var exceptionTypeName = ex.GetType().Name;
-                throw new Exception("Error opening the connection [" + exceptionTypeName + "]", ex.InnerException);
-            }
-            
+                configuration.RootPath = "ClientApp/build";
+            });
+
+            //services.AddCors(c =>
+            //{
+            //    c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,10 +57,9 @@ namespace ReactJS.Redux.Web
 
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapControllerRoute(
-                //    name: "default",
-                //    pattern: "{controller}/{action=Index}/{id?}");
-                endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller}/{action=Index}/{id?}");
             });
 
             app.UseSpa(spa =>
@@ -90,6 +71,9 @@ namespace ReactJS.Redux.Web
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
+
+            //app.UseCors(options => options.WithOrigins("https://localhost:44337"));
+            //app.UseCors(options => options.AllowAnyOrigin());
         }
     }
 }

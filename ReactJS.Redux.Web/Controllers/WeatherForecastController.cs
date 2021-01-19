@@ -1,12 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
-namespace ReactJS.Redux.Web.API.Controllers
+namespace ReactJS.Redux.Web.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -25,7 +24,6 @@ namespace ReactJS.Redux.Web.API.Controllers
         }
 
         [HttpGet]
-        [EnableCors("AllowOrigin")]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
