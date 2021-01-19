@@ -23,3 +23,4 @@ D:\ReactJS\ReactJS.Redux.CodeFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.CodeFir
 D:\ReactJS\ReactJS.Redux.CodeFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.dll
 D:\ReactJS\ReactJS.Redux.CodeFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.pdb
 D:\ReactJS\ReactJS.Redux.CodeFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.genruntimeconfig.cache
+D:\ReactJS\ReactJS.Redux.CodeFirst\obj\Debug\netcoreapp3.1\ReactJS.Redux.CodeFirst.csprojAssemblyReference.cache

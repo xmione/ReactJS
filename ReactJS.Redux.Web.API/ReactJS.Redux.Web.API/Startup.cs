@@ -6,11 +6,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ReactJS.Redux.Repositories;
 #if CF
-using EF = ReactJS.Redux.CodeFirst;
-using EFModels = ReactJS.Redux.CodeFirst.Models;
+    using EF = ReactJS.Redux.CodeFirst;
+    using EFModels = ReactJS.Redux.CodeFirst.Models;
 #else
-    using EF = ReactJS.Redux.DatabasEFModelsirst;
-    using EFModels = ReactJS.Redux.DatabasEFModelsirst.Models;
+    using EF = ReactJS.Redux.DatabaseFirst;
+    using EFModels = ReactJS.Redux.DatabaseFirst.Models;
 #endif
 using System;
 
