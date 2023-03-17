@@ -47,7 +47,7 @@ export const actionCreators = {
         const appState = getState();
         if (appState && appState.people && startDateIndex !== appState.people.startDateIndex) {
             fetch(`people`)
-            fetch(`https://localhost:44343/people`)
+            fetch(`https://localhost:7000/people`)
                 .then(response => {
                     console.log(response);
                     return response.json() as Promise<People[]>;
