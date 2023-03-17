@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ReactJS/v17
+/.vs/ReactJS/v17
+/ReactJS.Redux.CodeFirst
+/ReactJS.Redux.DatabaseFirst
+/ReactJS.Redux.Repositories
+/ReactJS.Redux.Web.API
